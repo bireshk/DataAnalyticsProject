@@ -1,3 +1,5 @@
+### GHG Emission from Agriculture and Forest Land_Analysis
+
 ![png_The-Glasgow-Climate-Change-Summit039s-Global-Stakes.jpg](https://github.com/bireshk/DataAnalyticsProject/blob/main/png/The-Glasgow-Climate-Change-Summit039s-Global-Stakes.jpg)
 
 
@@ -6,5 +8,21 @@ Machine learning (ML) models are increasingly used to study complex environmenta
 
 
  ![png_There%20is%20no%20planet%20B.jpg](https://github.com/bireshk/DataAnalyticsProject/blob/main/png/There%20is%20no%20planet%20B.png)
+ 
+ 
+ #### So,can we make it 
 
  ![png_dbs-joins-united-nations-netzero-banking-alliance-to-tackle-climate-change](https://github.com/bireshk/DataAnalyticsProject/blob/main/png/dbs-joins-united-nations-netzero-banking-alliance-to-tackle-climate-change.jpeg)
+ 
+ 
+ ### 	Abbreviations Used:
+•	UNFCCC: United Nations Framework Convention on Climate Change 
+•	FAO: Food and Agricultural Organization () of United Nation
+•	N2O: Nitrous Oxide
+•	CH4: Methane
+•	CO2: Carbon di Oxide
+•	AFOLU: Agriculture, Forestry and Other Land Use 
+•	Fc:  Calculated figure
+
+### Sources:
+
