@@ -81,7 +81,13 @@ TOOLs & SOFTWARE
 
 ### Machine Learning
 
-Machine learning (ML) models are increasingly used to study complex environmental phenomena with high variability in time and space. In this study, the potential of exploiting three categories of ML regression models, including classical regression, shallow learning, and deep learning for predicting greenhouse gas (GHG) emissions from an agricultural field was explored. Carbon dioxide (CO2) and nitrous oxide (N2O) fluxes, as well as various environmental, agronomic and soil data were measured at the site over a five-year period in Quebec, Canada. The rigorous analysis, which included statistical comparison and cross-validation for the prediction of CO2 and N2O fluxes, confirmed that the LSTM(Long -Short Term Memory) model performed the best among the considered ML models with the highest R coefficient and the lowest root mean squared error (RMSE) values.
+To create a machine learning model, we first began by taking data after cleaning process. Next we are doing data preprocessing to feed the model and then starting with simple linear regression. Python and Sklearn will used to train/test our cleaned data. Once the data was trained it will be run through a model.
+ 
+Regression analysis is a form of predictive modelling technique which investigates the relationship between a dependent (target) and independent variable (s) (predictor). The Regression models used for this project:
+•	Gradient Boosting Regressor
+•	Random Forest Regressor
+•	Support Vector Machine
+•	Decision Tree Regressor
 
 #### Tableau
 
@@ -147,4 +153,3 @@ Emission Vs Population Emission Vs Temperature
 ### Sources:
 
 https://www.fao.org/faostat/en/#data/GT
-
