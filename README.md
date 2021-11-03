@@ -13,6 +13,14 @@ Global warming is one of the biggest problems we are facing now. Not only indust
 
 In this project, we will use Python, AWS, Postgress, and Excell to get the data cleaned and stored and subsequently create graphs and charts using pivot table .Then we’ll use Machine learning to analyze the emission data , and finally, visualize through Tableau. We’ll try to create a dashboard with JavaScript and use interactive buttons to see the change in emission in different location comparing with the population.
 
+To create a machine learning model, we first began by taking data after cleaning process. Next we are doing data preprocessing to feed the model and then starting with simple linear regression. Python and Sklearn will used to train/test our cleaned data. Once the data was trained it will be run through a model.
+ 
+Regression analysis is a form of predictive modelling technique which investigates the relationship between a dependent (target) and independent variable (s) (predictor). The Regression models used for this project:
+•	Gradient Boosting Regressor
+•	Random Forest Regressor
+•	Support Vector Machine
+•	Decision Tree Regressor
+
 
 ### Source of Data:
 https://www.fao.org/faostat/en/#data/GT
