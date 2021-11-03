@@ -1,17 +1,20 @@
-### Agriculture and Forest Land Emission_Analysis
+### Agriculture and Forest Land Emission Analysis
+
+
+## Final Project: 1st Segment Deliverable
 
 ![png_The-Glasgow-Climate-Change-Summit039s-Global-Stakes.jpg](https://github.com/bireshk/DataAnalyticsProject/blob/main/png/The-Glasgow-Climate-Change-Summit039s-Global-Stakes.jpg)
 
 ### TOPIC
-Global warming is one of the biggest problems we are facing now. Not only industrialized emission, agriculture and forest land emissions also play a big role in contributing to global warming by releasing greenhouse gases (GHG) such as CO2, CH4, N2O.
+
+Global warming is one of the biggest problems we are facing now. Not only industrialized emission, agriculture and forest land emissions also play a big role in contributing to global warming by releasing greenhouse gases (GHG) such as CO2, CH4, N2O. 
 
 ### REASON
 
 In this project, we will use Python, AWS, Postgress, and Excell to get the data cleaned and stored and subsequently create graphs and charts using pivot table .Then we’ll use Machine learning to analyze the emission data , and finally, visualize through Tableau. We’ll try to create a dashboard with JavaScript and use interactive buttons to see the change in emission in different location comparing with the population.
 
-### Description
 
-### Sources:
+### Source of Data:
 https://www.fao.org/faostat/en/#data/GT
 
 
@@ -37,6 +40,9 @@ https://www.fao.org/faostat/en/#data/GT
 10. Which Machine Learning Model should be selected for the data analysis? Why?
 
 
+
+
+TOOLs & SOFTWARE
 ### Python
 
 · Most popular programming Language
