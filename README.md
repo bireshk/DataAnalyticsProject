@@ -1,11 +1,42 @@
-### GHG Emission from Agriculture and Forest Land_Analysis
+### Agriculture and Forest Land Emission_Analysis
 
 ![png_The-Glasgow-Climate-Change-Summit039s-Global-Stakes.jpg](https://github.com/bireshk/DataAnalyticsProject/blob/main/png/The-Glasgow-Climate-Change-Summit039s-Global-Stakes.jpg)
 
-
+### TOPIC
 Global warming is one of the biggest problems we are facing now. Not only industrialized emission, agriculture and forest land emissions also play a big role in contributing to global warming by releasing greenhouse gases (GHG) such as CO2, CH4, N2O.
 
+### REASON
+
 In this project, we will use Python, AWS, Postgress, and Excell to get the data cleaned and stored and subsequently create graphs and charts using pivot table .Then we’ll use Machine learning to analyze the emission data , and finally, visualize through Tableau. We’ll try to create a dashboard with JavaScript and use interactive buttons to see the change in emission in different location comparing with the population.
+
+### Description
+
+### Sources:
+https://www.fao.org/faostat/en/#data/GT
+
+
+### QUESTIONS
+
+1. What are the countries with the most emissions?
+
+2. What are the items and elements contributing to emissions?
+
+3. How has emission value changed over two decades?
+
+4. Is there any relationship between emission and population?
+
+5. Is there any relationship between development and emission?
+
+6. What are the special measures taken by the least contributing countries towards emissions?
+7. How can we categorize the countries by the range of emissions into red, yellow, and green zones?
+
+8. How has emission increased or decreased over past 20 years?
+
+9. How can Machine learning algorithms be used to predict the emissions for the future?
+
+10. Which Machine Learning Model should be selected for the data analysis? Why?
+
+
 ### Python
 
 · Most popular programming Language
@@ -56,27 +87,7 @@ Machine learning (ML) models are increasingly used to study complex environmenta
 
 · Visualize the data to communicate findings to the audience
 
-### QUESTIONS
 
-1. What are the countries with the most emissions?
-
-2. What are the items and elements contributing to emissions?
-
-3. How has emission value changed over two decades?
-
-4. Is there any relationship between emission and population?
-
-5. Is there any relationship between development and emission?
-
-6. What are the special measures taken by the least contributing countries towards emissions? 7. How can we categorize the countries by the range of emissions into red, yellow, and green zones?
-
-8. How has emission increased or decreased over past 20 years?
-
-9. How can Machine learning algorithms be used to predict the emissions for the future?
-
-10. Which Machine Learning Model should be selected for the data analysis? Why?
-
-·
 
 ### All the Abbreviations Used:
 
