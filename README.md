@@ -154,12 +154,14 @@ Emission Vs Population Emission Vs Temperature
  ![png_There%20is%20no%20planet%20B.jpg](https://github.com/bireshk/DataAnalyticsProject/blob/main/png/There%20is%20no%20planet%20B.png)
  
  
- #### So,can we make it 
-​
- ![png_dbs-joins-united-nations-netzero-banking-alliance-to-tackle-climate-change](https://github.com/bireshk/DataAnalyticsProject/blob/main/png/dbs-joins-united-nations-netzero-banking-alliance-to-tackle-climate-change.jpeg)
- 
- 
  
 ### Sources:
 ​
 https://www.fao.org/faostat/en/#data/GT
+
+
+https://res.cloudinary.com/teepublic/image/private/s--REt6CSRn--/t_Preview/b_rgb:000000,c_limit,f_auto,h_630,q_90,w_630/v1550588536/production/designs/4238157_0.jpg
+
+
+https://www.newsamed.com/the-climate-summit-in-glasgow-lets-choose-life/
+
