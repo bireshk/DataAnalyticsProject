@@ -82,9 +82,9 @@ Regression analysis is a form of predictive modelling technique which investigat
 ### AWS
 ​
 . Database deals with organized storage of data.
-​
+
 · Easily accessible data for all team members with updated version.
-​
+
 · The four basic functions of persistent data storage are Create, Read, Update, and Delete (CRUD)
 ​
 ### Postgress
