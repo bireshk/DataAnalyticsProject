@@ -54,11 +54,17 @@ Regression analysis is a form of predictive modelling technique which investigat
 ​
 * Decision Tree Regressor
 
+#### Normalized Database for Machine Learning
+
+![image](https://user-images.githubusercontent.com/85472349/140445292-80a10a87-59ee-46fd-bdb9-087237c7a769.png)
+
 ### Provisional Linear Regression Model
 
 ![png_RT1](https://github.com/bireshk/DataAnalyticsProject/blob/main/png1/RT1.PNG)
 
 ![png_RT2](https://github.com/bireshk/DataAnalyticsProject/blob/main/png1/Rt2.PNG)
+
+
 ​
 ## DATABASE
 ​
