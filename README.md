@@ -56,9 +56,9 @@ Regression analysis is a form of predictive modelling technique which investigat
 
 ### Provisional Linear Regression Model
 
-![png_RT1](https://github.com/bireshk/DataAnalyticsProject/blob/x/graph/RT1.PNG)
+![png_RT1](https://github.com/bireshk/DataAnalyticsProject/blob/main/png1/RT1.PNG)
 
-![png_RT2](https://github.com/bireshk/DataAnalyticsProject/blob/x/graph/Rt2.PNG)
+![png_RT2](https://github.com/bireshk/DataAnalyticsProject/blob/main/png1/Rt2.PNG)
 ​
 ## DATABASE
 ​
