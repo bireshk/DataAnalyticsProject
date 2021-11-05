@@ -53,6 +53,12 @@ Regression analysis is a form of predictive modelling technique which investigat
 * Support Vector Machine
 ​
 * Decision Tree Regressor
+
+### Provisional Linear Regression Model
+
+![png_RT1](https://github.com/bireshk/DataAnalyticsProject/blob/x/graph/RT1.PNG)
+
+![png_RT2](https://github.com/bireshk/DataAnalyticsProject/blob/x/graph/Rt2.PNG)
 ​
 ## DATABASE
 ​
