@@ -11,7 +11,7 @@ Global warming is one of the biggest problems we are facing now. Not only indust
 
 ### REASON
 * To know more about agriculture  and forestland emission 
-*  ML model to analyze the data elementwise, itemwise,or countrywise
+*  Will use ML model to analyze the data elementwise, itemwise,or countrywise
 
 
 In this project, we will use Python, AWS, Postgress, and Excell to get the data cleaned and stored and subsequently create graphs and charts using pivot table .Then we’ll use Machine learning to analyze the emission data , and finally, visualize through Tableau. We’ll try to create a dashboard with JavaScript and use interactive buttons to see the change in emission in different location comparing with the population.
