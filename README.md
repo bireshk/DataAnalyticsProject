@@ -10,11 +10,16 @@
 Global warming is one of the biggest problems we are facing now. Not only industrialized emission, agriculture and forest land emissions also play a big role in contributing to global warming by releasing greenhouse gases (GHG) such as CO2, CH4, N2O. 
 
 ### REASON
+* To know more about agriculture  and forestland emission 
+*  ML model to analyze the data elementwise, itemwise,or countrywise
+
 
 In this project, we will use Python, AWS, Postgress, and Excell to get the data cleaned and stored and subsequently create graphs and charts using pivot table .Then we’ll use Machine learning to analyze the emission data , and finally, visualize through Tableau. We’ll try to create a dashboard with JavaScript and use interactive buttons to see the change in emission in different location comparing with the population.
 
 
 ### Source of Data:
+We have used the data from data source of Food and Agriculture Organization of United Nation. This data is reliable and easily available. 
+
 https://www.fao.org/faostat/en/#data/GT
 
 
@@ -39,6 +44,7 @@ https://www.fao.org/faostat/en/#data/GT
 9. How can Machine learning algorithms be used to predict the emissions for the future?
 
 10. Which Machine Learning Model should be selected for the data analysis? Why?
+
 
 
 ## Machine Learning
