@@ -173,6 +173,10 @@ Emission Vs Population Emission Vs Temperature
 
 ### Interactive Dashboard
 
+### Communication
+* frequent zoom meeings
+* unlimited phone calls
+
 
 
 ![png_There%20is%20no%20planet%20B.jpg](https://github.com/bireshk/DataAnalyticsProject/blob/main/png/There%20is%20no%20planet%20B.png)
