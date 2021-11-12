@@ -165,6 +165,8 @@ N2O Emission Emission through the Decades
 Emission Vs Population Emission Vs Temperature
 
 ### Interactive Dashboard
+Rough sketch of the interactive dashboard we are going to create.
+![png_DashB_1](https://github.com/bireshk/DataAnalyticsProject/blob/main/Image/DashB_1.PNG)
 
 ### Communication
 
