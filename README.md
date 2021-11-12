@@ -115,13 +115,6 @@ We use SQLAlchemy library to facilitate the communication between Python program
 
 * Import and export csv files, create tables with SQL
 
-### Excell
-
-* Interactive charts and graph with pivot chart
-
-* Filters and conditional formatting
-
-* Organize and visualize for trends
 
 #### Tableau
 
@@ -172,6 +165,13 @@ N2O Emission Emission through the Decades
 Emission Vs Population Emission Vs Temperature
 
 ### Interactive Dashboard
+
+### Communication
+
+* frequent zoom meeings
+* unlimited phone calls
+* slack,whatsapp,emails for exchanging csvs,codes,graphs
+
 
 
 
