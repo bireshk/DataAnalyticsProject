@@ -80,7 +80,7 @@ Regression analysis is a form of predictive modelling technique which investigat
 
 We use SQLAlchemy library to facilitate the communication between Python program and the Database(Postgres). We also use AWS to store the data. Below is the ERD diagram:
 
-![ERD3](https://user-images.githubusercontent.com/62515666/140249177-62c6a9f0-f349-4a16-9a1f-24876e764c80.png)
+![ERD4](https://user-images.githubusercontent.com/62515666/141692785-2dfa9cdb-bb11-4890-bae3-4be020e8c249.png)
 
 
 ## TOOLs & SOFTWARE
