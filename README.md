@@ -1,7 +1,9 @@
 # Agriculture and Forest Land Emission Analysis
 
+[Link to Google Slides Presentation](https://docs.google.com/presentation/d/1YAfvlpk0U3Oy9Srs9rTvzcp4tBlyMZlRyR9JFlisfMc/edit#slide=id.g10116574057_0_2)
 
-## Final Project: 1st Segment Deliverable
+[Link to Tableau Story](https://public.tableau.com/app/profile/saranya.durairaju/viz/Emission_Story_new/Story2)
+
 
 ![png_The-Glasgow-Climate-Change-Summit039s-Global-Stakes.jpg](https://github.com/bireshk/DataAnalyticsProject/blob/main/png/The-Glasgow-Climate-Change-Summit039s-Global-Stakes.jpg)
 
@@ -46,21 +48,6 @@ https://www.fao.org/faostat/en/#data/GT
 10. Which Machine Learning Model should be selected for the data analysis? Why?
 
 
-
-## Machine Learning
-
-To create a machine learning model, we first began by taking data after cleaning process. Next we are doing data preprocessing to feed the model and then starting with simple linear regression. Python and Sklearn will used to train/test our cleaned data. Once the data was trained it will be run through a model.
- 
-Regression analysis is a form of predictive modelling technique which investigates the relationship between a dependent (target) and independent variable (s) (predictor). The Regression models used for this project:
-
-* Gradient Boosting Regressor
-
-* Random Forest Regressor
-
-* Support Vector Machine
-
-* Decision Tree Regressor
-
 ### Provisional Databases
 
 ![image](https://user-images.githubusercontent.com/85472349/140445183-f2c514aa-a530-4eba-a13b-048694187c2f.png)
@@ -69,18 +56,38 @@ Regression analysis is a form of predictive modelling technique which investigat
 
 ![image](https://user-images.githubusercontent.com/85472349/140445292-80a10a87-59ee-46fd-bdb9-087237c7a769.png)
 
-### Provisional Linear Regression Model
-
-![png_RT1](https://github.com/bireshk/DataAnalyticsProject/blob/main/png1/RT1.PNG)
-
-![png_RT2](https://github.com/bireshk/DataAnalyticsProject/blob/main/png1/Rt2.PNG)
-
 
 ## DATABASE
 
 We use SQLAlchemy library to facilitate the communication between Python program and the Database(Postgres). We also use AWS to store the data. Below is the ERD diagram:
 
 ![ERD4](https://user-images.githubusercontent.com/62515666/141692785-2dfa9cdb-bb11-4890-bae3-4be020e8c249.png)
+
+
+## Machine Learning
+
+* Data PreProcessing and Categorizing Element, Item, Year, Population, Emission features
+
+* Machine learning methods that predict the future Emission depends on many factors like soil temperature,air moisture,Volumetric Water Content(VWC). 
+
+* Classification algorithms which will help us identifying the Emission values into different Zones for each Elements (N2O, CH4, CO2).
+
+* Classifying the Target variable “Zones” into Binary Values is not possible as the data is Imbalanced. 
+
+* Multiclass classification is the problem of classifying instances into one of three or more classes.
+
+
+### Logistic Regression Classifier
+
+Logistic regression is a simple yet very effective classification algorithm. Multinomial logistic regression is an extension of logistic regression that adds native support for multi-class classification problems.
+
+![image](https://user-images.githubusercontent.com/85472349/141704705-e59cfa7d-899c-45fc-aedc-20c7a00ad4aa.png)
+
+### Random Forest Classifier
+
+A random forest classifier works with data having discrete labels or better known as class. It reduces overfitting in decision trees and helps to improve the accuracy. It is also flexible to both classification and regression problems and works well with both categorical and continuous values.
+
+![image](https://user-images.githubusercontent.com/85472349/141704737-27683f61-739f-4355-b20f-7272ad9ba634.png)
 
 
 ## TOOLs & SOFTWARE
@@ -190,4 +197,3 @@ https://res.cloudinary.com/teepublic/image/private/s--REt6CSRn--/t_Preview/b_rgb
 
 
 https://www.newsamed.com/the-climate-summit-in-glasgow-lets-choose-life/
-
