@@ -5,7 +5,7 @@
 [Link to Tableau Story](https://public.tableau.com/app/profile/saranya.durairaju/viz/Emission_Story_new/Story2)
 
 
-![png_The-Glasgow-Climate-Change-Summit039s-Global-Stakes.jpg](https://github.com/bireshk/DataAnalyticsProject/blob/main/png/The-Glasgow-Climate-Change-Summit039s-Global-Stakes.jpg)
+![png_The-Glasgow-Climate-Change-Summit039s-Global-Stakes.jpg](https://github.com/bireshk/DataAnalyticsProject/blob/main/Image/The-Glasgow-Climate-Change-Summit039s-Global-Stakes.jpg)
 
 ### TOPIC
 
