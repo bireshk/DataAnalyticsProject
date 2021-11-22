@@ -10,6 +10,7 @@ Presentation: [Link to Presentation](https://onedrive.live.com/view.aspx?resid=B
 Analysis dashboard:  [Link to Web Page](http://emission-tableau1.herokuapp.com/)
 
 
+
 ![image](https://github.com/bireshk/DataAnalyticsProject/blob/main/Image/The-Glasgow-Climate-Change-Summit039s-Global-Stakes.jpg)
 
 
@@ -250,5 +251,3 @@ The below tools and softwares are used for this project:
 
 
 ![image](https://user-images.githubusercontent.com/85472349/142783875-e54ce30a-3125-43bd-af08-7d16a864cc34.png)
-
-
