@@ -1,199 +1,254 @@
 # Agriculture and Forest Land Emission Analysis
 
-[Link to Google Slides Presentation](https://docs.google.com/presentation/d/1YAfvlpk0U3Oy9Srs9rTvzcp4tBlyMZlRyR9JFlisfMc/edit#slide=id.g10116574057_0_2)
-
-[Link to Tableau Story](https://public.tableau.com/app/profile/saranya.durairaju/viz/Emission_Story_new/Story2)
-
-
-![png_The-Glasgow-Climate-Change-Summit039s-Global-Stakes.jpg](https://github.com/bireshk/DataAnalyticsProject/blob/main/png/The-Glasgow-Climate-Change-Summit039s-Global-Stakes.jpg)
-
-### TOPIC
-
-Global warming is one of the biggest problems we are facing now. Not only industrialized emission, agriculture and forest land emissions also play a big role in contributing to global warming by releasing greenhouse gases (GHG) such as CO2, CH4, N2O. 
-
-### REASON
-* To know more about agriculture  and forestland emission 
-*  Will use ML model to analyze the data elementwise, itemwise,or countrywise
+**Submitted By:** Biresh Kundu | Praveeja Sasidharan Suni | Ruma Talukder | Saranya Durairaju </br>
+_Date_: November, 24th, 2021\
+_Data Analytics & Machine Learning Project_ : **Emission Analysis** <br/>
 
 
-In this project, we will use Python, AWS, Postgress, and Excell to get the data cleaned and stored and subsequently create graphs and charts using pivot table .Then we’ll use Machine learning to analyze the emission data , and finally, visualize through Tableau. We’ll try to create a dashboard with JavaScript and use interactive buttons to see the change in emission in different location comparing with the population.
+Presentation: [Link to Presentation](https://onedrive.live.com/view.aspx?resid=B51D62DA80D49BB1!7979&ithint=file%2cpptx&authkey=!AMpiq2tPZV8M22Y)
 
+Analysis dashboard:  [Link to Web Page](http://emission-tableau1.herokuapp.com/)
+
+
+![image](https://github.com/bireshk/DataAnalyticsProject/blob/main/Image/The-Glasgow-Climate-Change-Summit039s-Global-Stakes.jpg)
+
+
+## Table of Contents
+  * [Overview](#view)
+  * [FlowChart](#flowchart)
+  * [Analysis](#start)
+  * [Database](#data)
+  * [Machine Learning](#machinelearning)
+    * [Linear Regression](#linearregression)
+    * [Classification Algorithms](#classificationalgorithms)
+  * [Visualization](#viz)
+    * [Static Webpage](#staticpage)
+    * [Dashboard](#heroku)
+  * [Technologies](#tech)
+  * [Summary](#result)
+
+## <a name="view"></a>Overview
+Global warming is one of the biggest problems we are facing now. Not only industrialized emission, agriculture and forest land emissions also play a big role in contributing to global warming by releasing greenhouse gases (GHG) such as CO2, CH4, N2O. After this analysis we will know more about agriculture and forestland emission.  
+
+This project aims to deliver detailed view of each Country, Element, Items that are contributing to emission each Year. Also using the Machine Learning model, the data is anlayzed and categorized into zones. Our purpose is to Analyze the Emission data and to create a complete system from Cleaning to Modelling. 
 
 ### Source of Data:
 We have used the data from data source of Food and Agriculture Organization of United Nation. This data is reliable and easily available. 
 
 https://www.fao.org/faostat/en/#data/GT
 
-
-### QUESTIONS
-
-1. What are the countries with the most emissions?
-
-2. What are the items and elements contributing to emissions?
-
-3. How has emission value changed over two decades?
-
-4. Is there any relationship between emission and population?
-
-5. Is there any relationship between development and emission?
-
-6. What are the special measures taken by the least contributing countries towards emissions?
-
-7. How can we categorize the countries by the range of emissions into red, yellow, and green zones?
-
-8. How has emission increased or decreased over past 20 years?
-
-9. How can Machine learning algorithms be used to predict the emissions for the future?
-
-10. Which Machine Learning Model should be selected for the data analysis? Why?
+**Image sources** : https://github.com/bireshk/DataAnalyticsProject/blob/main/Data/Image_Sources.txt
 
 
-### Provisional Databases
+The project folder consists of these technical portions:
+```
+PROJECT
+├── .gitignore
+├── README.md
+├── Data
+│   ├── Emission_data.csv
+│   ├── Image_Sources.txt
+│   ├── Population_data.csv
+│   └── schema.sql
+├── Image
+│   └── All Images
+├── Scripts
+│   ├── Cleaning_Analysis
+│       ├── ETL_Emission_Population.ipynb  
+│       └── Pyplot_Emission_Population.ipynb
+│   ├── ML
+│       ├── ML_Emission_Classification_CH4.ipynb  
+│       ├── ML_Emission_Classification_N2O.ipynb
+│       ├── ML_Regression_Analysis_CH4.ipynb
+│       ├── ML_Regression_Analysis_N2O.ipynb
+│       └── ML_Regression_Analysis_World.ipynb
+│   ├── Tables
+│       ├── Data_Emission_Population_Merge.ipynb  
+│       ├── Data_SqlAlchemy_query.ipynb
+│       └── Data_Subtable_Creation.ipynb
+│   ├── Webpage_Static
+│       ├── Images
+│       ├── index.html
+│       └── style.css
+│   ├── Webpage_Tableau
+│       ├── Static
+│           ├── images
+│           └── css
+│       ├── composer.json
+│       ├── index.html
+│       └── index.php
+```
 
-![image](https://user-images.githubusercontent.com/85472349/140445183-f2c514aa-a530-4eba-a13b-048694187c2f.png)
+## <a name="flowchart"></a>Flow Chart
 
-#### Normalized Database for Machine Learning
+Below diagram represents the complete flow chart of the project:
 
-![image](https://user-images.githubusercontent.com/85472349/140445292-80a10a87-59ee-46fd-bdb9-087237c7a769.png)
-
-
-## DATABASE
-
-We use SQLAlchemy library to facilitate the communication between Python program and the Database(Postgres). We also use AWS to store the data. Below is the ERD diagram:
-
-![ERD4](https://user-images.githubusercontent.com/62515666/141692785-2dfa9cdb-bb11-4890-bae3-4be020e8c249.png)
+![image](https://user-images.githubusercontent.com/85472349/142781485-c2a0ad38-0903-4fee-8239-faad5a15bb42.png)
 
 
-## Machine Learning
+## <a name="start"></a>Analysis
 
-* Data PreProcessing and Categorizing Element, Item, Year, Population, Emission features
+The source data was analyzed properly and cleaned for further processing. Below are the steps followed on data transformation:
 
-* Machine learning methods that predict the future Emission depends on many factors like soil temperature,air moisture,Volumetric Water Content(VWC). 
+* Uncleaned Emission and Population data are moved in to two separate data frames
 
-* Classification algorithms which will help us identifying the Emission values into different Zones for each Elements (N2O, CH4, CO2).
+* Dropped the "Unit" columns from both Emission and Population datasets as it contains the same information(**Emission** - Kilotonnes, **Population** - 1000persons)
 
-* Classifying the Target variable “Zones” into Binary Values is not possible as the data is Imbalanced. 
+* Dropped the Years from 1961 to 1989 as it have very negligible informations.
 
-* Multiclass classification is the problem of classifying instances into one of three or more classes.
+* Normalized the data by changing the Year columns to rows using the “melt” statement.
+
+* Null values replaced with zero and the cleaned data is finally saved as CSV file and moved to AWS’ S3 bucket.
+
+### Charts
+
+* Trend of elements which cause Emission over years are plotted as a line graph
+
+* Emission of top 25 countries are plotted using a bar chart
+
+* Emission over years are plotted using a scatter plot
+
+* Percentage of Emission caused by different Items such as Rice Cultivation, Manure Management, Savanna Fire etc. are plotted
+
+* The Items causing CH4, N2O & CO2 emissions are seperatly plotted using Pie charts.
+
+![image](https://user-images.githubusercontent.com/85472349/142782476-8dfd8342-cc50-4952-8521-a81ca4f3c965.png)
 
 
-### Logistic Regression Classifier
+**Results**
 
-Logistic regression is a simple yet very effective classification algorithm. Multinomial logistic regression is an extension of logistic regression that adds native support for multi-class classification problems.
+* CO2 emission is having the highest percentage.
 
-![image](https://user-images.githubusercontent.com/85472349/141704705-e59cfa7d-899c-45fc-aedc-20c7a00ad4aa.png)
+* CH4 and N2O emission is much less than CO2, but with high warming potential. 
 
-### Random Forest Classifier
+* Brazil has the highest Agriculture and Forest land emission, Indonesia comes second.
+
+* Russian Federation has the lowest Agriculture and land emission, Romania comes next.
+
+* When we look at the emission over years, there is lot of variations and it's going upwards from 2010 onwards.
+
+
+## <a name="data"></a>Data Base
+
+* The Emission table and Population table are merged to create the new Emission table with population using the common column "Area_Code"
+
+* Merged table has been splitted into two separate table to have countries (Area_Code < 5000) and world records (Area_Code >= 5000)
+
+* The data is then moved to AWS S3 bucket for project Analyis and Postgres for storage, future data retrieval
+
+![image](https://user-images.githubusercontent.com/85472349/142781510-71497eac-63e7-4fad-b5d6-0dbe9e3a720f.png)
+
+### Subtables
+
+* The main source table "Emission" is split into four tables like Area, Element, Item, Emission and moved to Postgres using SQLAlchemy
+
+* Using the join and query, the same table can be retrieved in future for analysis
+
+* This helps us in Easy storage, data backup and efficiency
+
+![image](https://user-images.githubusercontent.com/85472349/142781510-71497eac-63e7-4fad-b5d6-0dbe9e3a720f.png)
+
+
+## <a name="machinelearning"></a>Machine Learning
+
+In Machine Learning, Methane (CH4) and Nitrous Oxide (N2O) emissions are analyzed as it contributes more on Agriculture and Forest land emissions. Below are the list items contribute in each gas. 
+
+![image](https://user-images.githubusercontent.com/85472349/141954151-80dd5f92-6b6c-4240-a29c-9208c55a253b.png)
+
+### <a name="linearregression"></a>Linear Regression
+
+Linear regression attempts to model the relationship between two variables by fitting a linear equation to observe data. Using Linear regression the most contributing items of top 3 countries and the Whole world data are analyzed and this results will help in figuring the action needed items for those countries.
+
+**Global Green House Gas Emission Analysis**
+
+![image](https://user-images.githubusercontent.com/85472349/141962584-68e4989b-5cc5-4c49-9c5c-1b83b70c42d1.png)
+
+```Linear Regression results help us to view whether the Emission data is constantly increasing or decreasing, how the data are linearly related, Items which need immediate attention etc. ```
+
+
+### <a name="classificationalgorithms"></a>Classification Algorithms
+
+* Machine learning methods that predict the future Emission depends on many factors like soil temperature, air moisture, Volumetric Water Content(VWC)
+* Classification algorithms will help us identifying the Emission values into different Zones for each Elements
+* Classifying the Target variable “Zones” into Binary Values is not possible as the data is Imbalanced
+* Multiclass classification is the problem of classifying instances into one of three or more classes
+* Data pre-processing and Categorizing Element, Item, Year, Population, Emission features
+
+
+#### Logistic Regression Classifier
+
+Logistic regression is a simple yet very effective classification algorithm. Multinomial logistic regression is an extension of logistic regression that adds native support for multi-class classification problems. Below are the Confusion Matrix:
+
+![image](https://user-images.githubusercontent.com/85472349/142752292-5bb6374d-8092-4ce2-b47e-659e0e341740.png)
+
+![image](https://user-images.githubusercontent.com/85472349/142752300-9a3d445b-9678-49d7-a916-b94c3f1249ff.png)
+
+
+#### Random Forest Classifier
 
 A random forest classifier works with data having discrete labels or better known as class. It reduces overfitting in decision trees and helps to improve the accuracy. It is also flexible to both classification and regression problems and works well with both categorical and continuous values.
 
-![image](https://user-images.githubusercontent.com/85472349/141704737-27683f61-739f-4355-b20f-7272ad9ba634.png)
+![image](https://user-images.githubusercontent.com/85472349/142752314-547b3c5d-23c4-4c5e-8fff-af6b766cfa3b.png)
+
+![image](https://user-images.githubusercontent.com/85472349/142752316-060719b4-76b9-4f71-953a-e24d8c1b7683.png)
 
 
-## TOOLs & SOFTWARE
+### ML Results
 
-### Python
+![image](https://user-images.githubusercontent.com/85472349/141973384-fcd1b24f-42be-4f14-a5db-994ff5471916.png)
 
-* Most popular programming Language
+### ML Summary
 
-* Code easy to write
+The above results show that the Logistic Regression Algorithm classifies the Emission more accurately than Random Forest Classifier. Since our data is Skewed (Stratify was used) and Imbalanced which results in more number of items in specific categories. This might be the reason that our Logistic performed better than the Random Forest. Also, Logistic regression performs better when the number of noise variables is less than or equal to the number of explanatory variables. (Noise variables - Difficult or impossible to control; Explanatory Variable - manipulated in an experiment by a researcher). So. which model performs better completely depends on our Data set.
 
-* Performs complex calculations quickly
+```With our Classification model, we can easily categories the countries into zones (Red, Orange, Yellow & Green) according to the impacting Items, Emission value and Population. Let's aim to have most of the countries into our Zone 0 in future```
 
-* Handles large Data Files
+For more details about Machine Learning Model, please visit : [ML_Repo](https://github.com/saranyadurairaju/Module20-Final-Assignment)
 
-* Help to access, process, and manipulate data
+## <a name="viz"></a>Visualization
 
-### ETL
+Now its time to visualize all the information and results in a webpage for easy and interactive way. 
 
-* To get consistent Data
+### <a name="staticpage"></a>Static Webpage
 
-* Reduce the time to do analysis with a robust data
+Static Webpage is created to summarize and visualize the analytical charts and Machine Learning Model results using HTML, CSS.
 
-### AWS
+Analysis results: [static page](https://saranyadurairaju.github.io/Module20-static-webpage/)
 
-* Database deals with organized storage of data.
+### <a name="heroku"></a>Dashboard
 
-* Easily accessible data for all team members with updated version.
+Tableau emission story is incorporated as a Webpage using HTML to make it more flexible and interactive. Tableau story consists of below items:
 
-* The four basic functions of persistent data storage are Create, Read, Update, and Delete (CRUD)
+* Map, Bubble chart of Countries with Population and Total Emission
+* Views of Item wise emission data 
+* Element wise emission details for countries
 
-### Postgress
-
-* Import and export csv files, create tables with SQL
-
-
-#### Tableau
-
-* Powerful analytic dashboard to tell a story which is visually appealing and easy for anyone to understand.
-
-### Javascript
-
-* Create attractive, accessible, and interactive data with the help of button- and drop-down menus.
-
-* Visualize the data to communicate findings to the audience
-
-## Other Details
-
-### All the Abbreviations Used:
-
-* UNFCCC: United Nations Framework Convention on Climate Change
-
-* FAO: Food and Agricultural Organization () of United Nation
-
-* N2O: Nitrous Oxide
-
-* CH4: Methane
-
-* CO2: Carbon di Oxide
-
-* AFOLU: Agriculture, Forestry and Other Land Use
-
-* Fc: Calculated figure
-
-### Reason for removing the columns
-
-1. Fc: Calculated value. It’s not adding any information or data.
-
-2. Source UNFCCC: United Nations Framework Convention on Climate Change has negligible data to compare and account for.
-
-3. All units are in Kilotons, hence removed the column.
-
-### Negative Value
-
-Some amount of released CO2 is again used in photosynthesis and some countries forestation or reduce in deforestation helps in removal of excessive CO2 in atmosphere.
-
-### TABLEAU Pages
-
-CO2 Emission CH4 Emission
-
-N2O Emission Emission through the Decades
-
-Emission Vs Population Emission Vs Temperature
-
-### Interactive Dashboard
-Rough sketch of the interactive dashboard we are going to create.
-![png_DashB_1](https://github.com/bireshk/DataAnalyticsProject/blob/main/Image/DashB_1.PNG)
-
-### Communication
-
-* frequent zoom meeings
-* unlimited phone calls
-* slack,whatsapp,emails for exchanging csvs,codes,graphs
-
-
-
-
-![png_There%20is%20no%20planet%20B.jpg](https://github.com/bireshk/DataAnalyticsProject/blob/main/png/There%20is%20no%20planet%20B.png)
+Complete Emission Analysis Webpage: [Emission_Analysis_Web](http://emission-tableau1.herokuapp.com/)
  
- 
- 
-### Sources:
+## <a name="tech">Technologies</a>
 
-https://www.fao.org/faostat/en/#data/GT
+The below tools and softwares are used for this project: 
+
+* Python 
+* HTML/CSS
+* Postgres
+* Jupyter Notebook
+* Tableau
+* Plotly
+* Heroku
+* AWS
+* SQLAlchemy
+
+## <a name="result"></a>Summary
+
+* Analysis of data using charts
+* Relationship is determined using Linear Regression
+* Categorized the data into Zones according to the Emission value
+* Easy and Interactive dashboard data visualization
+
+**With our results, its easy to predict where and how fast the action needs to be taken. Hoping to bring all the countries into our Green Zone soon!!!**
 
 
-https://res.cloudinary.com/teepublic/image/private/s--REt6CSRn--/t_Preview/b_rgb:000000,c_limit,f_auto,h_630,q_90,w_630/v1550588536/production/designs/4238157_0.jpg
+![image](https://user-images.githubusercontent.com/85472349/142783875-e54ce30a-3125-43bd-af08-7d16a864cc34.png)
 
 
-https://www.newsamed.com/the-climate-summit-in-glasgow-lets-choose-life/
