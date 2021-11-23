@@ -9,12 +9,14 @@ Presentation: [Link to Presentation](https://1drv.ms/p/s!ArGb1IDaYh21vi0wHKInS7d
 
 Analysis dashboard:  [Link to Web Page](http://emission-tableau1.herokuapp.com/)
 
+PDF Version of ReadME:  [Report.pdf](https://drive.google.com/file/d/16TF46muQNI6UEDGVST8ZQ7eZqssZ9NsR/view?usp=sharing)
 
 
-![image](https://github.com/bireshk/DataAnalyticsProject/blob/main/Image/The-Glasgow-Climate-Change-Summit039s-Global-Stakes.jpg)
+![image](https://user-images.githubusercontent.com/85472349/142972825-2e1eb5e3-9763-45aa-8cc7-17678aecc87a.png)
 
 
 ## Table of Contents
+
   * [Overview](#view)
   * [FlowChart](#flowchart)
   * [Analysis](#start)
@@ -29,11 +31,13 @@ Analysis dashboard:  [Link to Web Page](http://emission-tableau1.herokuapp.com/)
   * [Summary](#result)
 
 ## <a name="view"></a>Overview
+
 Global warming is one of the biggest problems we are facing now. Not only industrialized emission, agriculture and forest land emissions also play a big role in contributing to global warming by releasing greenhouse gases (GHG) such as CO2, CH4, N2O. After this analysis we will know more about agriculture and forestland emission.  
 
 This project aims to deliver detailed view of each Country, Element, Items that are contributing to emission each Year. Also using the Machine Learning model, the data is anlayzed and categorized into zones. Our purpose is to Analyze the Emission data and to create a complete system from Cleaning to Modelling. 
 
 ### Source of Data:
+
 We have used the data from data source of Food and Agriculture Organization of United Nation. This data is reliable and easily available. 
 
 https://www.fao.org/faostat/en/#data/GT
@@ -93,7 +97,7 @@ The source data was analyzed properly and cleaned for further processing. Below 
 
 * Uncleaned Emission and Population data are moved in to two separate data frames
 
-* Dropped the "Unit" columns from both Emission and Population datasets as it contains the same information(**Emission** - Kilotonnes, **Population** - 1000persons)
+* Dropped the "Unit" columns from both Emission and Population datasets as it contains the same information(**Emission** - Kilotons, **Population** - 1000persons)
 
 * Dropped the Years from 1961 to 1989 as it have very negligible informations.
 
@@ -109,11 +113,14 @@ The source data was analyzed properly and cleaned for further processing. Below 
 
 * Emission over years are plotted using a scatter plot
 
+![image](https://user-images.githubusercontent.com/85472349/142782476-8dfd8342-cc50-4952-8521-a81ca4f3c965.png)
+
+
 * Percentage of Emission caused by different Items such as Rice Cultivation, Manure Management, Savanna Fire etc. are plotted
 
 * The Items causing CH4, N2O & CO2 emissions are seperatly plotted using Pie charts.
 
-![image](https://user-images.githubusercontent.com/85472349/142782476-8dfd8342-cc50-4952-8521-a81ca4f3c965.png)
+![image](https://user-images.githubusercontent.com/85472349/142969306-d7775714-a652-4f32-9268-a5048f696285.png)
 
 
 **Results**
@@ -126,7 +133,7 @@ The source data was analyzed properly and cleaned for further processing. Below 
 
 * Russian Federation has the lowest Agriculture and land emission, Romania comes next.
 
-* When we look at the emission over years, there is lot of variations and it's going upwards from 2010 onwards.
+* Emission over years has lot of variations and it's going upwards from 2010 onwards.
 
 
 ## <a name="data"></a>Data Base
@@ -137,7 +144,8 @@ The source data was analyzed properly and cleaned for further processing. Below 
 
 * The data is then moved to AWS S3 bucket for project Analyis and Postgres for storage, future data retrieval
 
-![image](https://user-images.githubusercontent.com/85472349/142781510-71497eac-63e7-4fad-b5d6-0dbe9e3a720f.png)
+![image](https://user-images.githubusercontent.com/85472349/142969405-254b6684-8c16-4f85-aae6-62f47142f3a8.png)
+
 
 ### Subtables
 
@@ -147,7 +155,7 @@ The source data was analyzed properly and cleaned for further processing. Below 
 
 * This helps us in Easy storage, data backup and efficiency
 
-![image](https://user-images.githubusercontent.com/85472349/142781510-71497eac-63e7-4fad-b5d6-0dbe9e3a720f.png)
+![image](https://user-images.githubusercontent.com/85472349/142969427-40ff298e-a925-4eec-9787-090d1a0e2429.png)
 
 
 ## <a name="machinelearning"></a>Machine Learning
@@ -164,15 +172,19 @@ Linear regression attempts to model the relationship between two variables by fi
 
 ![image](https://user-images.githubusercontent.com/85472349/141962584-68e4989b-5cc5-4c49-9c5c-1b83b70c42d1.png)
 
-```Linear Regression results help us to view whether the Emission data is constantly increasing or decreasing, how the data are linearly related, Items which need immediate attention etc. ```
+> *Linear Regression results help us to view whether the Emission data is constantly increasing or decreasing, how the data are linearly related, Items which need immediate attention etc. From our Global data, its clear that CH4 and N2O are increasing rapidly and its time to focus on classifying countries into different zones.*
 
 
 ### <a name="classificationalgorithms"></a>Classification Algorithms
 
 * Machine learning methods that predict the future Emission depends on many factors like soil temperature, air moisture, Volumetric Water Content(VWC)
+
 * Classification algorithms will help us identifying the Emission values into different Zones for each Elements
+
 * Classifying the Target variable “Zones” into Binary Values is not possible as the data is Imbalanced
+
 * Multiclass classification is the problem of classifying instances into one of three or more classes
+
 * Data pre-processing and Categorizing Element, Item, Year, Population, Emission features
 
 
@@ -196,13 +208,16 @@ A random forest classifier works with data having discrete labels or better know
 
 ### ML Results
 
+The confusion matrix from both models shows that the True Positive (TP) values are relatively high. Also, Type I, Type II errors are also less. Compare to Random Forest, Logistic Regression shows good results. Below table represents the classification report values of both Elements from the models. 
+
 ![image](https://user-images.githubusercontent.com/85472349/141973384-fcd1b24f-42be-4f14-a5db-994ff5471916.png)
+
 
 ### ML Summary
 
 The above results show that the Logistic Regression Algorithm classifies the Emission more accurately than Random Forest Classifier. Since our data is Skewed (Stratify was used) and Imbalanced which results in more number of items in specific categories. This might be the reason that our Logistic performed better than the Random Forest. Also, Logistic regression performs better when the number of noise variables is less than or equal to the number of explanatory variables. (Noise variables - Difficult or impossible to control; Explanatory Variable - manipulated in an experiment by a researcher). So. which model performs better completely depends on our Data set.
 
-```With our Classification model, we can easily categories the countries into zones (Red, Orange, Yellow & Green) according to the impacting Items, Emission value and Population. Let's aim to have most of the countries into our Zone 0 in future```
+> *With our Classification model, we can easily categories the countries into zones (Red, Orange, Yellow & Green) according to the impacting Items, Emission value and Population. Let's aim to have most of the countries into our Zone 0 in future!*
 
 For more details about Machine Learning Model, please visit : [ML_Repo](https://github.com/saranyadurairaju/Module20-Final-Assignment)
 
@@ -216,6 +231,7 @@ Static Webpage is created to summarize and visualize the analytical charts and M
 
 Analysis results: [static page](https://saranyadurairaju.github.io/Module20-static-webpage/)
 
+
 ### <a name="heroku"></a>Dashboard
 
 Tableau emission story is incorporated as a Webpage using HTML to make it more flexible and interactive. Tableau story consists of below items:
@@ -224,7 +240,22 @@ Tableau emission story is incorporated as a Webpage using HTML to make it more f
 * Views of Item wise emission data 
 * Element wise emission details for countries
 
-Complete Emission Analysis Webpage: [Emission_Analysis_Web](http://emission-tableau1.herokuapp.com/)
+**Complete Emission Analysis Webpage:** [Emission_Analysis_Web](http://emission-tableau1.herokuapp.com/)
+
+
+![image](https://user-images.githubusercontent.com/85472349/142968936-c962540c-f957-44cb-8dfb-e3e0f7bceb77.png)
+
+
+
+#### Emission Gauge Meter 
+
+The country and the Emission value with corresponding zones can be viewed in Gauge meter like below:
+
+![image](https://user-images.githubusercontent.com/85472349/142968131-9ec781af-4cf2-4e15-90ab-d8e44d403957.png)
+
+
+For more details about the code and implementation, please visit : [gauge_repo](https://github.com/Ruma-T/gaugemeter)
+
  
 ## <a name="tech">Technologies</a>
 
@@ -247,7 +278,7 @@ The below tools and softwares are used for this project:
 * Categorized the data into Zones according to the Emission value
 * Easy and Interactive dashboard data visualization
 
-**With our results, its easy to predict where and how fast the action needs to be taken. Hoping to bring all the countries into our Green Zone soon!!!**
+***With our results, its easy to predict where and how fast the action needs to be taken. Hoping to bring all the countries into our Green Zone soon!!!***
 
 
 ![image](https://user-images.githubusercontent.com/85472349/142783875-e54ce30a-3125-43bd-af08-7d16a864cc34.png)
