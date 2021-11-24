@@ -9,7 +9,7 @@ Presentation: [Link to Presentation](https://1drv.ms/p/s!ArGb1IDaYh21vi0wHKInS7d
 
 Analysis dashboard:  [Link to Web Page](http://emission-tableau1.herokuapp.com/)
 
-PDF Version of ReadME:  [Report.pdf](https://drive.google.com/file/d/16TF46muQNI6UEDGVST8ZQ7eZqssZ9NsR/view?usp=sharing)
+PDF Version of ReadME:  [Report.pdf](https://drive.google.com/file/d/1_txMztqf7GLkMUXJwxzUwLZ3i2_Yxu-1/view?usp=sharing)
 
 
 ![image](https://user-images.githubusercontent.com/85472349/142972825-2e1eb5e3-9763-45aa-8cc7-17678aecc87a.png)
@@ -28,7 +28,9 @@ PDF Version of ReadME:  [Report.pdf](https://drive.google.com/file/d/16TF46muQNI
     * [Static Webpage](#staticpage)
     * [Dashboard](#heroku)
   * [Technologies](#tech)
+  * [Recommendation](#future)
   * [Summary](#result)
+
 
 ## <a name="view"></a>Overview
 
@@ -271,6 +273,16 @@ The below tools and softwares are used for this project:
 * AWS
 * SQLAlchemy
 
+## <a name="future"></a>Recommendation
+
+If this project was extended for some more time, the below improvisations could be done:
+
+* Try to add more features to predict the future Emission
+* More Classification Models
+* Categorization with equal intervals
+* Webpage to scrap recent data 
+* Portal to calculate future emission with given values
+
 ## <a name="result"></a>Summary
 
 * Analysis of data using charts
@@ -282,3 +294,4 @@ The below tools and softwares are used for this project:
 
 
 ![image](https://user-images.githubusercontent.com/85472349/142783875-e54ce30a-3125-43bd-af08-7d16a864cc34.png)
+
